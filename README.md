@@ -14,6 +14,6 @@ This is the Stage 2 CRUD API, now fully containerized. The in-memory/SQLite repo
 ## Proof of Persistence
 Data persistence is achieved via a Docker volume (`pgdata`). To verify:
 1. Open Swagger UI (`http://localhost:8000/docs`) and POST a new task.
-2. Stop the containers by pressing `Ctrl+C` in the terminal, or running `docker compose down`.
+2. Stop the containers.
 3. Restart the containers with `docker compose up`.
-4. Run a GET request to `/tasks`. The task you created before the restart will still be there.
+4. Run a GET request to `/tasks`. The task you created before the restart will still be there. 

@@ -1,5 +1,4 @@
 version: '3.8'
-
 services:
   db:
     image: postgres:15
@@ -11,7 +10,6 @@ services:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
-
   app:
     build: .
     ports:
@@ -20,6 +18,5 @@ services:
       - DATABASE_URL=postgresql://postgres:password@db:5432/tasksdb
     depends_on:
       - db
-
 volumes:
   pgdata:
